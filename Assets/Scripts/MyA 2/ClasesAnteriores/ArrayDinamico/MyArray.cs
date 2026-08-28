@@ -1,9 +1,11 @@
 namespace Clases2025
 {
+    using System.Collections;
+    using System.Collections.Generic;
     using UnityEngine;
 
     [System.Serializable]
-    public class MyArray<T>
+    public class MyArray<T> : IEnumerable<T>
     {
         private int count = 0;
         public int Count
@@ -77,6 +79,20 @@ namespace Clases2025
             }
 
             count++;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            //for (int i = 0; i < array.Length; i++) //  hasta CAPACITY total
+            for (int i = 0; i < count; i++)
+            {
+                yield return array[i]; //de a poquito
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() // Este es el que usa el FOREACH
+        {
+            return GetEnumerator();
         }
     }
 }

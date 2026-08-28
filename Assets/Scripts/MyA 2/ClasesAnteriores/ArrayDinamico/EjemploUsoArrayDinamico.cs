@@ -16,7 +16,14 @@ namespace Clases2025
             if (Input.GetKeyDown(KeyCode.T))
             {
                 myArray.Add(Random.Range(0, 100)); //0 a 99
-                myArray[0] = Random.Range(0, 100);
+                myArray.Add(Random.Range(0, 100)); //0 a 99
+                myArray.Add(Random.Range(0, 100)); //0 a 99
+                //myArray[0] = Random.Range(0, 100);
+
+                foreach (var item in myArray) 
+                { 
+                    print(item); 
+                }
             }
         }
     }
