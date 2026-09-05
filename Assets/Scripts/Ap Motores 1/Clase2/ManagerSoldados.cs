@@ -1,3 +1,4 @@
+using Clase2;
 using UnityEngine;
 
 public class ManagerSoldados : MonoBehaviour
