@@ -17,6 +17,19 @@ public class TestHashet : MonoBehaviour
         /// hash &=  0x7FFFFFFF; /// lo hace positivo
         /// 
 
+        int code = this.gameObject.GetHashCode();
+
+        int codeAbs = Mathf.Abs(code); /// siempre el valor positivo
+
+
+
+       var h = Input.GetAxis("Horizontal");
+
+        if (Mathf.Abs(h) > 0.1f)
+        {
+            //animator.SetFloat("axisX",h);
+        }
+
 
         uniqueCollection.Add("Jose");
         uniqueCollection.Add("Pedro");
@@ -38,37 +51,37 @@ public class TestHashet : MonoBehaviour
 
         ///FRONT END del USUARIO
         ///
-        string pass = "Pass123"; // UI
+        //string pass = "Pass123"; // UI
 
-        int code = pass.GetHashCode();
-        code = code & 0x7FFFFFFF;
+        //int code = pass.GetHashCode();
+        //code = code & 0x7FFFFFFF;
 
         /// BACKEND SERVER
-        contraseñas.Add(pass);
+        //contraseñas.Add(pass);
 
 
 
 
-        ///FRONT END del USUARIO Otro usuario, otro front
-        ///
-        string passdeOtrousuario = "Pass123"; // UI 0x7FF34FFFF
-        string passdeOtrousuario2 = "juandCarloZarzra"; // UI 0x7FF34FFF
+        /////FRONT END del USUARIO Otro usuario, otro front
+        /////
+        //string passdeOtrousuario = "Pass123"; // UI 0x7FF34FFFF
+        //string passdeOtrousuario2 = "juandCarloZarzra"; // UI 0x7FF34FFF
 
 
 
 
-        int code2 = pass.GetHashCode();
-        code = code & 0x7FFFFFFF;
+        //int code2 = pass.GetHashCode();
+        //code = code & 0x7FFFFFFF;
 
 
-        if (contraseñas.Contains(passdeOtrousuario))
-        {
+        //if (contraseñas.Contains(passdeOtrousuario))
+        //{
 
-        }
+        //}
 
 
 
-        ////Hash con posibilidad de guardar un valor -> HashTable != Diccionario
+        //////Hash con posibilidad de guardar un valor -> HashTable != Diccionario
     }
 
     public class KeyVal
